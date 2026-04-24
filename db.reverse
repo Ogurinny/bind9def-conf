@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     localhost. root.localhost. (
+                     2025042301         ; Serial ,disini ubah ke waktu sekarang,artinya update ke satu(1) pada 2025,bulan 04,tanggak 23
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      localhost. ;disini ditaruh domainmu,misal domainku.org. (jangan lupa titik di akhir ya)
+1       IN      PTR     localhost. ;disini juga sama,tapi dengan tambahan angka terakhir ip,misalnya ip server ini nya itu 192.168.1.1,maka taruh angka satu di pengawlaannya.
+
+; di setiap update pada file ini,jangan lupa menaikan angka serialnya dari 01 sampe seterusnya
